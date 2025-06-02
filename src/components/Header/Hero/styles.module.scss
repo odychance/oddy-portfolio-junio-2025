@@ -1,0 +1,66 @@
+@import '/src/theme/index.scss';
+
+.containerHero {
+  width: 100vw;
+  height: 100%;
+  position: fixed;
+  @extend .display-between;
+  pointer-events: none;
+  
+  .textHeader {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    padding: 30vh 2vw;
+    filter: drop-shadow(1px 1px 1px #FFF);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    
+    .titleText {
+      font-size: 4vw;
+      font-family: $ff-secondary;
+      letter-spacing: 2vw;
+      text-transform: uppercase;
+      padding: 1vw 0;
+      border-bottom: 2px solid #000;
+
+      opacity: 0;
+      
+      span {
+        letter-spacing: 1vw;
+        font-family: $ff-primary;
+      }
+    }
+    
+    .targetText {
+      padding: 1vw 0;
+      font-size: 1vw;
+      
+      opacity: 0;
+      
+      span {
+        font-family: $ff-secondary;
+      }
+    }
+  }
+}
+
+.imageWrapper {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  
+  opacity: 0;
+  
+  .meCartoon {
+    object-fit: contain;
+    width: 30vw !important;
+    height: 30vw !important;
+    position: absolute;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(6px 6px 6px rgba(0, 0, 0, 0.6));
+  }
+}

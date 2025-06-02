@@ -1,0 +1,79 @@
+@import '/src/theme/index.scss'; 
+
+.loaderContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $bg-secondary;
+  width: 100vw;
+  height: 100vh;
+  @extend .display-center;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+.loaderWrapper {
+  position: relative;
+  color: $color-primary;
+  @extend .display-center;
+}
+
+.loaderBar {
+  background-color: $bg-primary;
+  color: $color-primary;
+  width: 10vh;
+  height: 10vh;
+  border-radius: 20px;
+  position: relative;
+  top: 0;
+  left: 0;
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+  z-index: 1;
+  transition: all 3.5s cubic-bezier(.71,.17,.4,.7);
+}
+
+.loaderBarContainer::after {
+  content: "";
+  width: 100%;
+  height: .5vh;
+  background-color: $bg-primary;
+  position: absolute;
+  bottom: -15%;
+  left: 0;
+}
+
+.counterLoading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: $ff-tertiary;
+  font-weight: 200;
+  color: $color-secondary;
+}
+
+.loaderFront {
+  color: $color-primary;
+}
+
+.pageContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 110vh;
+  background-color: $bg-primary;
+
+  p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: blur(0.5px) drop-shadow(2px 2px 2px #000);
+    font-size: 6vw;
+    width: 100%;
+    text-align: center;
+    color: $color-tertiary;
+    font-family: $ff-secondary;
+  }
+}

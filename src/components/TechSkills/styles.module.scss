@@ -1,0 +1,98 @@
+@import '/src/theme/index.scss';
+
+.containerTechSkills {
+  width: 100%;
+  height: 100vh;
+  background-color: $bg-secondary;
+  @extend .display-center;
+  flex-direction: column;
+  padding: 10vw 0 0 0;
+
+  .title {
+    font-size: 3vw;
+    font-family: $ff-secondary;
+    color: $color-tertiary;
+    letter-spacing: 1vw;
+    padding: 2vw 0;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+  }
+
+  .wrapperTechs {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+
+    .abstractForm {
+      position: absolute;
+      top: 40% !important;
+      left: 50% !important;
+      transform: translate(-50%, -50%);
+      width: 50% !important;
+      opacity: 0.3;
+      scale: 1;
+      animation: scalingForm 8s ease-in-out infinite alternate-reverse;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .techs {
+      width: 60vw;
+      height: 50vh;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2px;
+
+      .tech {
+        position: relative;
+        @extend .display-center;
+
+        .techImg {
+          scale: .4;
+          filter: grayscale(100%);
+          transition: all .3s ease-in-out;
+        }
+        
+        .techText {
+          z-index: 1;
+          font-family: $ff-secondary;
+          font-size: 1vw;
+          color: $color-secondary;
+          filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+          opacity: 0;
+          scale: 0;
+          transition: all .3s ease-in-out;
+        }
+
+        &:hover {
+          .techImg {
+            scale: .7;
+            filter: grayscale(20%) !important;
+          }
+
+          .techText {
+            opacity: 1;
+            scale: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes scalingForm {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.1;
+  }
+  100% {
+    scale: 1;
+  }
+}

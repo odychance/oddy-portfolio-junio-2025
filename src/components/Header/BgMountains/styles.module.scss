@@ -1,0 +1,97 @@
+.containerBgMountains {
+  background: linear-gradient(to bottom, #3A434F 0%, #888E96 30%, #DAD5C9 100%);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  margin-top: 4vh;
+  opacity: 0;
+}
+
+.wrapperContainer {
+  width: 170vw;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: relative;
+}
+
+.mountain {
+  position: absolute;
+  width: 170vw !important;
+  margin-left: -5vw;
+  scale: 1;
+}
+
+.mountain6 {
+  top: -50vh !important;
+}
+.mountain5 {
+  top: -25% !important;
+}
+.mountain4 {
+  top: -25% !important;
+}
+.mountain3 {
+  top: 5% !important;
+  animation: smogMove2 11s ease-in-out infinite;
+}
+.mountain2 {
+  top: -12% !important;
+}
+.mountain1 {
+  // position: absolute;
+  top: 14% !important;
+  animation: smogMove 6s ease-in-out infinite;
+
+}
+
+@keyframes smogMove {
+  0% {
+    left: -1.5%;
+  } 50% {
+    left: -3%;
+    scale: 1.025;
+  }
+  100% {
+    left: -1.5%
+  }
+}
+
+@keyframes smogMove2 {
+  0% {
+    left: -1.5%;
+  } 50% {
+    left: 3%;
+    scale: 0.975;
+  }
+  100% {
+    left: -1.5%
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .mountain {
+    width: 150vw;
+  }
+  .mountain6 {
+    top: -25vh !important;
+  }
+  .mountain5 {
+    top: -1% !important;
+  }
+  .mountain4 {
+    top: -1% !important;
+  }
+  .mountain3 {
+    top: 25% !important;
+  }
+  .mountain2 {
+    top: 10% !important;
+  }
+  .mountain1 {
+    top: 33% !important;
+  }
+}

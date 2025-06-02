@@ -1,0 +1,109 @@
+@import '/src/theme/index.scss';
+
+.containerContact {
+  width: 100vw;
+  height: 50vh;
+  position: relative;
+  overflow: hidden;
+  background-color: $bg-secondary;
+
+  .backgroundContainer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 70vh !important;
+    object-fit: cover;
+  }
+
+  .wrapperContact {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    @extend .display-center;
+    flex-direction: column;
+
+    .title {
+      position: absolute;
+      top: 40%;
+      font-family: $ff-secondary;
+      text-transform: uppercase;
+      font-size: 2vw;
+      letter-spacing: .5vw;
+      color: $bg-secondary;
+    }
+
+    .containerInfo {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 40%;
+
+      .infoContact {
+        padding: 1vw;
+        @extend .display-between;
+        flex: 1;
+        height: 70%;
+        
+        > * {
+          flex: 1;
+          font-size: 1vw;
+        }
+
+        .left {
+          @extend .display-center;
+          flex-direction: column;
+          gap: 2vh;
+          
+          h3 {
+            font-family: $ff-secondary;
+            letter-spacing: .5vw;
+            text-transform: uppercase;
+          }
+
+          p {
+            letter-spacing: .2vw;
+            text-align: center;
+            font-size: .8vw;
+          }
+        }
+        
+        .center {
+          font-size: .8vw;
+          letter-spacing: .2vw;
+          text-align: center;
+        }
+
+        .right {
+          @extend .display-center;
+          gap: 1vw;
+
+          .networkIcon {
+            scale: .6;
+            filter: contrast(50%);
+            padding: 0.5vw;
+            border-radius: 10px;
+            transition: all .3s ease-in-out;
+            &:hover {
+              background-color: $bg-primary;
+            }
+          }
+        }
+      }
+
+      .ocfd {
+        width: 100%;
+        text-align: center;
+        font-family: $ff-secondary;
+        letter-spacing: .4vw;
+        text-transform: uppercase;
+        padding: 1vw 0 0 0;
+        border-top: 2px solid $bg-secondary;
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@import '/src/theme/index.scss';
+
+.HeaderContainer {
+  padding-top: 4vh;
+  height: 100vh;
+  position: relative;
+  background-color: $bg-primary;
+}
+
+.indexing {
+  z-index: 1;
+}

@@ -1,0 +1,44 @@
+@import '/src/theme/index.scss';
+
+.menuBtn {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 3vw;
+  height: 3vw;
+  cursor: pointer;
+  z-index: 102;
+
+  .btnLine {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1.5vw;
+    height: 0.1vw;
+    background-color: $color-primary;
+    transition: all .5s ease-in-out;
+  }
+
+  .line1Menu {
+    top: 60%;
+  }
+  .line2Menu {
+    bottom: 60%;
+  }
+}
+
+.openBar1, .openBar2 {
+  background-color: $bg-primary !important;
+}
+
+.openBar1{
+  top: 60%;
+  transform: translate(-50%, -50%) rotate(225deg) !important;
+  transition: all .5s ease-in-out;
+}
+.openBar2{
+  top: 60%;
+  transform: translate(-50%, -50%) rotate(-225deg) !important;
+  transition: all .5s ease-in-out;
+}

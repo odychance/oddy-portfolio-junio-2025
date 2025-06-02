@@ -1,0 +1,43 @@
+@import '/src/theme/index.scss';
+
+.containerNavbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4vh;
+  background-color: rgba($bg-primary, 0.5);
+  @extend .display-between;
+  padding: 0 1vw;
+  z-index: 9998;
+  opacity: 0;
+}
+
+.containerLeft {
+  a {
+    @extend .display-center;
+    text-decoration: none;
+    color: $color-primary;
+
+    .logo {
+      width: 3vh;
+      height: auto;
+    }
+
+    span {
+      text-transform: uppercase;
+    }
+  }
+}
+
+.menuNavbar {
+  clip-path: circle(200% at 100% 0);
+  transition: all 1s ease-in-out;
+  z-index: 101;
+}
+
+.menuBarOpened {
+  transition: all 1s ease-in-out;
+  clip-path: circle(0% at 100% 0);
+
+}

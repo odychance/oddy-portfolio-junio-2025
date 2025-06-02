@@ -1,0 +1,133 @@
+@import '/src/theme/index.scss';
+
+.containerProjects {
+  width: 100vw;
+  height: 250vh;
+  z-index: 999;
+  position: relative;
+  background: linear-gradient(to bottom, #FEF5E4 0%, #FEF5E4 80%, #2D3238 80%, #2D3238 100%);
+}
+
+.containerBgImages {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 205vh; 
+  overflow: hidden;
+}
+
+.wrapperImages {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.projectsTitle {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 2px solid $color-primary;
+  border-inline-color: transparent;
+  width: 40vw;
+  height: 10vw;
+  @extend .display-center;
+  z-index: 2;
+
+  opacity: 0;
+  
+  p {
+    font-family: $ff-secondary;
+    text-transform: uppercase;
+    font-size: 5vw;
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.8));
+
+    opacity: 0;
+  }
+}
+
+.projects {
+  z-index: 1;
+  position: relative;
+  top: 40vh;
+  left: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  width: 100%;
+  height: 220vh;
+  gap: 2vw;
+  
+  .projectTarget {
+    width: 80vw;
+    height: 20vw;
+    display: flex;
+    opacity: 0;
+
+    .wrapperProjectImg {
+      position: relative;
+      width: 70%;
+      height: 100%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      
+        .projectImg {
+          width: 100%;
+          object-fit: contain;
+          transition: all .25s ease-in-out;
+          position: relative;
+        }
+
+        .previewVideo {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          opacity: 0;
+          transition: opacity 0.25s ease-in-out;
+          pointer-events: none;
+        }
+        
+        &:hover .previewVideo {
+          opacity: 1;
+          transition: opacity 0.25s ease-in-out;
+        }
+        
+        &:hover .projectImg {
+          opacity: 0;
+          transition: opacity 0.25s ease-in-out;
+        }
+      }
+
+    .wrapperText {
+      width: 30%;
+      @extend .display-center;
+      flex-direction: column;
+      padding: 1.5vw;
+      gap: 1vw;
+
+      p {
+        filter: drop-shadow(1px 1px 1px rgba(255, 255, 255, 0.8));
+        font-size: 0.8vw;
+        text-align: justify;
+        &:nth-of-type(1) {
+          font-family: $ff-secondary;
+        }
+      }
+    }
+  }
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
