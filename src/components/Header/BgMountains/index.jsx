@@ -24,21 +24,18 @@ const BgMountains = ({ className, isLoading, setStateMountains, stateHero, conta
   const bgMountains = bgMountainsRef.current
   const containerHeader = containerHeaderRef.current
 
-  const mountainsArr = [ 
-    { ref: mountain1Ref, speed: 0.15, distance: 100 },
-    { ref: mountain2Ref, speed: 0.15, distance: 60 },
-    { ref: mountain3Ref, speed: 0.15, distance: 50 },
-    { ref: mountain4Ref, speed: 0.15, distance: 40 },
-    { ref: mountain5Ref, speed: 0.15, distance: 30 },
-    { ref: mountain6Ref, speed: 0.15, distance: 15 },
-  ]
-
   const mountainsDisplayed = () => setStateMountains(false)
   
+  useMouseFollow(mountain1Ref, { speed: 0.15, distance: 100 });
+  useMouseFollow(mountain2Ref, { speed: 0.15, distance: 60 });
+  useMouseFollow(mountain3Ref, { speed: 0.15, distance: 50 });
+  useMouseFollow(mountain4Ref, { speed: 0.15, distance: 40 });
+  useMouseFollow(mountain5Ref, { speed: 0.15, distance: 30 });
+  useMouseFollow(mountain6Ref, { speed: 0.15, distance: 15 });
+
   useEffect(() => {
     if(isLoading === false ){
       animateLoading({bgMountains, wrapperContainer, mountainsDisplayed})
-      mountainsArr.forEach(( el, idx) => useMouseFollow(el.ref, {speed: el.speed, distance: el.distance}))
     }
   }, [isLoading])
   
