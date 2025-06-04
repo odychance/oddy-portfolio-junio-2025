@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useRef } from 'react'
 import s from './styles.module.scss'
 import Image from 'next/image'
 import clsx from 'clsx'
@@ -17,21 +17,13 @@ const BgMountains = () => {
   const mountain4Ref = useRef(null)
   const mountain5Ref = useRef(null)
   const mountain6Ref = useRef(null)
-
-  useEffect(() => {
-    const mountainsArr = [ 
-      { ref: mountain1Ref, speed: 0.15, distance: 100 },
-      { ref: mountain2Ref, speed: 0.15, distance: 60 },
-      { ref: mountain3Ref, speed: 0.15, distance: 50 },
-      { ref: mountain4Ref, speed: 0.15, distance: 40 },
-      { ref: mountain5Ref, speed: 0.15, distance: 30 },
-      { ref: mountain6Ref, speed: 0.15, distance: 15 },
-    ]
-
-    mountainsArr.forEach((el) => {
-      useMouseFollow(el.ref, {speed: el.speed, distance: el.distance})
-    })
-  }, [])
+  
+  useMouseFollow(mountain1Ref, {speed: 0.15, distance: 100})
+  useMouseFollow(mountain2Ref, {speed: 0.15, distance: 60})
+  useMouseFollow(mountain3Ref, {speed: 0.15, distance: 50})
+  useMouseFollow(mountain4Ref, {speed: 0.15, distance: 40})
+  useMouseFollow(mountain5Ref, {speed: 0.15, distance: 30})
+  useMouseFollow(mountain6Ref, {speed: 0.15, distance: 15})
 
   return (
     <div className={s["bgContainer"]}>
