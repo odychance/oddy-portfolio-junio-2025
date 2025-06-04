@@ -6,7 +6,7 @@ import Link from 'next/link'
 import logo from '/public/logo.svg'
 import Menu from './Menu'
 import OpenCloseBtn from '../Button/OpenCloseBtn'
-import { anim } from './Navbar.anim'
+import { anim } from './Navbar.anim.js'
 
 const Navbar = ({ isLoading }) => {
   const [ openMenu, setOpenMenu ] = useState(false)
