@@ -35,9 +35,9 @@ const About = ({ className, containerHeaderRef, stateHero, setStateHeaderDone })
         <Image src="/Media/Img/Me-photo.png" className={s["mePhoto"]} alt="" fill />
       </div>
       <div className={s["wrapperText"]}>
-        <p ref={text1Ref}>I'm a <span>front-end developer</span> focused on building modern<br/>interfaces with Next.js, SCSS, and GSAP.</p>
-        <p ref={text2Ref}>I'm interested in <span>creating dynamic web experiences</span> that<br/> combine design and performance. I also have <span>experience<br/> with backends</span> (Node.js, GraphQL, MongoDB) and CMSs such<br/> as Prismic and Strapi.</p>
-        <p ref={text3Ref}>I'm passionate about continuing to learn and work with<br/>technologies within the JavaScript ecosystem. I'm a native<br/> Spanish speaker with <span>intermediate (B2) English.</span></p>
+        <p ref={text1Ref}>I&apos;m a <span>front-end developer</span> focused on building modern<br/>interfaces with Next.js, SCSS, and GSAP.</p>
+        <p ref={text2Ref}>I&apos;m interested in <span>creating dynamic web experiences</span> that<br/> combine design and performance. I also have <span>experience<br/> with backends</span> (Node.js, GraphQL, MongoDB) and CMSs such<br/> as Prismic and Strapi.</p>
+        <p ref={text3Ref}>I&apos;m passionate about continuing to learn and work with<br/>technologies within the JavaScript ecosystem. I&apos;m a native<br/> Spanish speaker with <span>intermediate (B2) English.</span></p>
       </div>
     </div>
   )
