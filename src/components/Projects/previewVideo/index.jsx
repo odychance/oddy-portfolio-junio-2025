@@ -10,4 +10,5 @@ const PreviewVideo = React.forwardRef(({ src, className }, ref) => {
   )
 })
 
+PreviewVideo.displayName = "PreviewVideo"
 export default PreviewVideo

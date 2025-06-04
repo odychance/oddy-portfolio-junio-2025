@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef, Children } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import s from './styles.module.scss'
 import clsx from 'clsx'
 import Image from 'next/image'
