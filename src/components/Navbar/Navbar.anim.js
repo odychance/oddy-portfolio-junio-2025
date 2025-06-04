@@ -6,7 +6,6 @@ export const anim = ({navbarContainer}) => {
   tl.set(navbarContainer, {
     y: "-5vh",
   })
-
   tl.to(navbarContainer, {
     y: "0vh",
     opacity: 1,
